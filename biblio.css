@@ -1,0 +1,422 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #18dcff;
+    --accent-color: #32ff7e;
+    --text-color: #333;
+    --bg-color: #f5f6fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*(Toutes les pages)*/
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;;
+}
+
+.adresse {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #ecf0f1;
+}
+
+nav {
+    background-color: #34495e;
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/*ACCUEIL*/
+.galerie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.galerie img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.galerie img:hover {
+    transform: scale(1.05);
+}
+
+.description p {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.table-abonnes {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.table-abonnes th, .table-abonnes td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.table-abonnes th {
+    background-color: var(--accent-color);
+    color: #1b1b1b;
+    font-size: 1.1rem;
+}
+
+.table-abonnes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-abonnes tr:hover {
+    background-color: #f1f2f6;
+}
+
+/*ABONNEMENT*/
+.modalites-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent-color);
+    min-width: 300px;
+}
+
+h3.card-title {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: none;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid var(--secondary-color);
+    border-radius: 0;
+    display: block;
+    border-left: none;
+}
+
+.card ul {
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+/*HORAIRES*/
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.table-horaires {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+}
+
+.table-horaires th, .table-horaires td {
+    border: 1px solid #ddd;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.table-horaires thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.col-jour {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cell-groupe {
+    background-color: #eccc68;
+    font-weight: bold;
+    color: #2f3542;
+}
+
+.cell-pause {
+    background-color: #7bed9f;
+    font-style: italic;
+    color: #2f3542;
+}
+
+.cell-event {
+    background-color: #ff7f50;
+    color: white;
+    font-weight: bold;
+}
+
+.cell-admin {
+    background-color: #a4b0be;
+    color: white;
+}
+
+.cell-ferme {
+    background-color: #ff4757;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.table-horaires tbody tr:not(:last-child):hover {
+    background-color: #f1f2f6;
+}
+
+/*INSCRIPTION*/
+.form-inscription fieldset {
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.form-inscription legend {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h4 {
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.question-label {
+    color: var(--primary-color) !important;
+    font-size: 1.05rem;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(24, 220, 255, 0.3);
+}
+
+.select-multiple {
+    height: auto;
+    padding: 5px;
+}
+
+.select-multiple option {
+    padding: 8px;
+    margin-bottom: 2px;
+}
+
+.inline-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+.inline-group label {
+    margin-bottom: 0;
+    margin-right: 20px;
+    min-width: 120px;
+}
+
+.radio-options, .checkbox-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-options label, .checkbox-options label {
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.checkbox-options {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-submit, .btn-reset {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: #1b1b1b;
+}
+
+.btn-submit:hover {
+    background-color: #2ed573;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background-color: #ccc;
+}
+
+/*LIVRES*/
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.theme-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.theme-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    display: block;
+}
+
+.theme-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE DE LA BIBLIOTHEQUE ATLAS - Inscription</title>
+    <link rel="stylesheet" href="biblio.css">
+</head>
+<body>
+    <header>
+        <h1>SITE DE LA BIBLIOTHEQUE ATLAS</h1>
+        <p class="adresse">5, Boulevard Zerktouni – Casablanca</p>
+    </header>
+
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="abonnement.html">Abonnement</a>
+        <a href="horaires.html">Horaires</a>
+        <a href="livres.html">Livres</a>
+        <a href="inscription.html">Inscription</a>
+    </nav>
+
+    <section id="inscription" class="container">
+        <h2>Formulaire d'inscription</h2>
+        
+        <form action="#" method="post" class="form-inscription">
+            <fieldset>
+                <legend>Merci de bien vouloir remplir ce formulaire</legend>
+                
+                <div class="form-section">
+                    <h4>Informations personnelles</h4>
+                    
+                    <div class="form-group">
+                        <label for="nom_prenom">Nom PRENOM :</label>
+                        <input type="text" id="nom_prenom" name="nom_prenom" placeholder="Ex:Yahya Naffakh">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ville_pays">Ville - Pays :</label>
+                        <input type="text" id="ville_pays" name="ville_pays" value="Casa - Maroc">
+                    </div>
+                    
+                    <div class="form-group inline-group">
+                        <label>Sexe :</label>
+                        <div class="radio-options">
+                            <input type="radio" id="sexe_m" name="sexe" value="M">
+                            <label for="sexe_m">Masculin</label>
+                            
+                            <input type="radio" id="sexe_f" name="sexe" value="F">
+                            <label for="sexe_f">Féminin</label>
+                            
+                            <input type="radio" id="sexe_i" name="sexe" value="I">
+                            <label for="sexe_i">Indéterminé</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age :</label>
+                        <select id="age" name="age">
+                            <option value="0-15">0-15 ans</option>
+                            <option value="16-25">16-25 ans</option>
+                            <option value="26-40">26-40 ans</option>
+                            <option value="40+">+ 40 ans</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Sondage</h4>
+                    
+                    <div class="form-group">
+                        <label class="question-label">Que pensez-vous de l'ensemble des thèmes disponibles à la bibliothèque ?</label>
+                        <div class="checkbox-options">
+                            <div>
+                                <input type="checkbox" id="theme_complet" name="avis_themes" value="complet" checked>
+                                <label for="theme_complet">Complet</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="theme_ameliorer" name="avis_themes" value="a_ameliorer">
+                                <label for="theme_ameliorer">À améliorer</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="theme_incomplet" name="avis_themes" value="incomplet">
+                                <label for="theme_incomplet">Incomplet</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="avis_site" class="question-label">Le site est :</label>
+                        <select size="3" id="avis_site" name="avis_site" class="select-multiple">
+                            <option value="sympa">Sympa</option>
+                            <option value="moyen">Moyen</option>
+                            <option value="a_revoir">À revoir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suggestions" class="question-label">Des suggestions ?</label>
+                        <textarea id="suggestions" name="suggestions" rows="5" placeholder="Tapez ici toute remarque que vous jugerez utile !"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Envoyer</button>
+                    <button type="reset" class="btn-reset">Effacer</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+</html>
